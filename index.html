@@ -88,3 +88,16 @@ score;	  /* number, keep track of the player score */
 	set: function(val, x, y) {
 		this._grid[x][y] = val;
 	},
+
+	/**
+	 * Get the value of the cell at (x, y)
+	 * 
+	 * @param  {number} x the x-coordinate
+	 * @param  {number} y the y-coordinate
+	 * @return {any}   the value at the cell
+	 */
+	 get: function(x, y) {
+		return this._grid[x][y];
+	}
+}
+
