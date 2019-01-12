@@ -6,9 +6,9 @@ body {
 }
 
 div {
-  background-color: lightgrey;
+  background-color: greenyellow;
   width: 300px;
-  border: 25px grey;
-  padding: 25px;
-  margin: 25px;
+  border: 15px lightgrey;
+  padding: 15px;
+  margin: 15px;
 }
