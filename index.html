@@ -205,3 +205,14 @@ score;	  /* number, keep track of the player score */
 	grid.set(SNAKE, sp.x, sp.y);
 	setFood();
 }
+
+/**
+ * The game loop function, used for game updates and rendering
+ */
+ function loop() {
+	update();
+	draw();
+	// When ready to redraw the canvas call the loop function
+	// first. Runs about 60 frames a second
+	window.requestAnimationFrame(loop, canvas);
+}
