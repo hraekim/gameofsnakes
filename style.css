@@ -4,3 +4,11 @@ body {
     background-image: url("pattern.png");
     background-size: cover;
 }
+
+div {
+  background-color: lightgrey;
+  width: 300px;
+  border: 25px grey;
+  padding: 25px;
+  margin: 25px;
+}
