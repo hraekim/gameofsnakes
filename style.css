@@ -12,3 +12,8 @@ div {
   padding: 15px;
   margin: 15px;
 }
+
+.divbox {
+  text-align: center; 
+  vertical-align: middle;
+}
