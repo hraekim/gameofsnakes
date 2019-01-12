@@ -77,3 +77,14 @@ score;	  /* number, keep track of the player score */
 			}
 		}
 	},
+
+	/**
+	 * Set the value of the grid cell at (x, y)
+	 * 
+	 * @param {any}    val what to set
+	 * @param {number} x   the x-coordinate
+	 * @param {number} y   the y-coordinate
+	 */
+	set: function(val, x, y) {
+		this._grid[x][y] = val;
+	},
