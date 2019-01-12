@@ -108,3 +108,20 @@ score;	  /* number, keep track of the player score */
  * @type {Object}
  */
  snake = {
+
+	direction: null, /* number, the direction */
+	last: null,		 /* Object, pointer to the last element in
+						the queue */
+	_queue: null,	 /* Array<number>, data representation*/
+	/**
+	 * Clears the queue and sets the start position and direction
+	 * 
+	 * @param  {number} d start direction
+	 * @param  {number} x start x-coordinate
+	 * @param  {number} y start y-coordinate
+	 */
+	init: function(d, x, y) {
+		this.direction = d;
+		this._queue = [];
+		this.insert(x, y);
+	},
