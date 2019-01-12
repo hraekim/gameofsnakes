@@ -137,3 +137,14 @@ score;	  /* number, keep track of the player score */
 		this._queue.unshift({x:x, y:y});
 		this.last = this._queue[0];
 	},
+
+	/**
+	 * Removes and returns the first element in the queue.
+	 * 
+	 * @return {Object} the first element
+	 */
+	 remove: function() {
+		// pop returns the last element of an array
+		return this._queue.pop();
+	}
+};
