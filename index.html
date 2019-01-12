@@ -125,3 +125,15 @@ score;	  /* number, keep track of the player score */
 		this._queue = [];
 		this.insert(x, y);
 	},
+
+	/**
+	 * Adds an element to the queue
+	 * 
+	 * @param  {number} x x-coordinate
+	 * @param  {number} y y-coordinate
+	 */
+	 insert: function(x, y) {
+		// unshift prepends an element to an array
+		this._queue.unshift({x:x, y:y});
+		this.last = this._queue[0];
+	},
