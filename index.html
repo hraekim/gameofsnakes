@@ -166,3 +166,30 @@ score;	  /* number, keep track of the player score */
 	var randpos = empty[Math.round(Math.random()*(empty.length - 1))];
 	grid.set(FRUIT, randpos.x, randpos.y);
 }
+
+/**
+ * Starts the game
+ */
+ function main() {
+	// create and initiate the canvas element
+	canvas = document.createElement("canvas");
+	canvas.width = COLS*20;
+	canvas.height = ROWS*20;
+	ctx = canvas.getContext("2d");
+	// add the canvas element to the body of the document
+	document.body.appendChild(canvas);
+	// sets an base font for bigger score display
+	ctx.font = "12px Helvetica";
+	frames = 0;
+	keystate = {};
+	// keeps track of the keybourd input
+	document.addEventListener("keydown", function(evt) {
+		keystate[evt.keyCode] = true;
+	});
+	document.addEventListener("keyup", function(evt) {
+		delete keystate[evt.keyCode];
+	});
+	// intatiate game objects and starts the game loop
+	init();
+	loop();
+}
