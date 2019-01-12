@@ -193,3 +193,15 @@ score;	  /* number, keep track of the player score */
 	init();
 	loop();
 }
+
+/**
+ * Resets and inits game objects
+ */
+ function init() {
+	score = 0;
+	grid.init(EMPTY, COLS, ROWS);
+	var sp = {x:Math.floor(COLS/2), y:ROWS-1};
+	snake.init(UP, sp.x, sp.y);
+	grid.set(SNAKE, sp.x, sp.y);
+	setFood();
+}
